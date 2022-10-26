@@ -36,6 +36,7 @@ public class MemberAdapter extends RecyclerView.Adapter<MemberAdapter.ViewHolder
     public MemberAdapter(List<MemberData> memberDataList, Context context) {
         this.memberDataList = memberDataList;
         this.context = context;
+        //주석
     }
 
     @NonNull

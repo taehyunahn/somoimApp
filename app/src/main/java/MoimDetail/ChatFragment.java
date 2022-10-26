@@ -84,7 +84,7 @@ public class ChatFragment extends Fragment {
 
 
     static String staticUserSeq;
-    static String staticMoimSeq;
+    static String staticMoimSeq; //변동사항 발생
 
 
     List<ChatData> chatDataList = new ArrayList<>();
@@ -108,6 +108,7 @@ public class ChatFragment extends Fragment {
         chat_rv = rootView.findViewById(R.id.recyclerView); // 채팅 목록 리사이클러뷰
         layout_chatInput = rootView.findViewById(R.id.layout_chatInput);
         list_empty = rootView.findViewById(R.id.list_empty);
+
 
         // sharedPreference 세팅 (완료)
         sp = getContext().getSharedPreferences("login", Activity.MODE_PRIVATE);
