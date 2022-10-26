@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.somoim">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:name="LoginSignUp.KakaoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Somoim">
+        <activity
+            android:name="Meetup.MeetupUpdate"
+            android:exported="false" />
+        <activity
+            android:name="MoimDetail.Photo.AlbumView"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="MyMoim.AllCreatedMoim"
+            android:exported="false" />
+        <activity
+            android:name="MyMoim.AllRecommendedMoim"
+            android:exported="false" />
+        <activity
+            android:name="MyMoim.AllJoinedMoim"
+            android:exported="false" />
+        <activity
+            android:name="MyProfile.InterestEdit"
+            android:exported="false" />
+
+        <service
+            android:name="Chat.ChatService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="ImmortalService.RealService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name="ImmortalService.RestartService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name="BoardComment.CommentUpdate"
+            android:exported="false" />
+        <activity
+            android:name="MoimDetail.Board.BoardUpdate"
+            android:exported="false" />
+        <activity
+            android:name="MoimDetail.Board.BoardView"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="MoimDetail.Board.BoardCreate"
+            android:exported="false" />
+        <activity
+            android:name="MoimDetail.MoimAgreement"
+            android:exported="false" />
+        <activity
+            android:name="Meetup.MeetupView"
+            android:exported="false" />
+        <activity
+            android:name="Meetup.MeetupCreate"
+            android:exported="false" />
+        <activity
+            android:name="MoimSearch.MoimSearch"
+            android:exported="false" />
+        <activity
+            android:name="MoimCreate.MoimUpdate"
+            android:exported="false" />
+        <activity
+            android:name="MoimCreate.AddressList"
+            android:exported="false" />
+        <activity
+            android:name="MoimCreate.AddressListUpdate"
+            android:exported="false" />
+        <activity
+            android:name="MoimCreate.MoimInterest"
+            android:exported="true" />
+        <activity
+            android:name="MoimCreate.MoimCreate"
+            android:exported="false" />
+        <activity
+            android:name="MyProfile.ProfileUpdate"
+            android:exported="true" />
+        <activity
+            android:name="LoginSignUp.SignUpAddress"
+            android:exported="true" />
+        <activity
+            android:name="LoginSignUp.SignUpNameAgeGender"
+            android:exported="true" />
+        <activity
+            android:name="LoginSignUp.SignUpInterest"
+            android:exported="true" />
+        <activity
+            android:name="MoimSearch.MoimListActivity"
+            android:exported="false" />
+        <activity
+            android:launchMode="singleInstance"
+            android:name="MoimDetail.MoimDetailMain"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="LoginSignUp.SignUpSMS"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="LoginSignUp.SignUpPassword"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="MyMoim.MyMoimActivity"
+            android:exported="false" />
+        <activity
+            android:name="MoimSearch.MoimSearchActivity"
+            android:exported="false" />
+        <activity
+            android:name="MyProfile.ProfileActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge" />
+        <activity
+            android:name="LoginSignUp.SignUpEmail"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name="LoginSignUp.OtherLogin"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".KakaoLoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <!-- Redirect URI: "kakao${NATIVE_APP_KEY}://oauth" -->
+                <data
+                    android:host="oauth"
+                    android:scheme="kakao8ad22ffd52d53fbc1685b6533e4d39d2" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.somoim.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

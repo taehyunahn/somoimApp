@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/editMeetup"
+        android:title="정모 수정" />
+
+    <item
+        android:id="@+id/deleteMeetup"
+        android:checkable="false"
+        android:icon="@drawable/ic_create"
+        android:title="정모 삭제" />
+
+
+
+</menu>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <font
+        android:font="@font/nanumsquareroundeb"
+        android:fontStyle="normal"
+        android:fontWeight="1000"
+        app:font="@font/nanumsquareroundeb"
+        app:fontStyle="normal"
+        app:fontWeight="1000"
+        tools:targetApi="o" />
+
+</font-family>
